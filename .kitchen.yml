@@ -1,0 +1,18 @@
+---
+driver:
+  name: docker
+
+provisioner:
+  name: dummy
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: nginx
+    driver_config:
+      image: qwerty1979/test-nginx
+      platform: ubuntu
+
+suites:
+  - name: default
